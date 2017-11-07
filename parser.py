@@ -8,7 +8,7 @@ headers = {'user-agent': "Mozilla/5.0 (Windows NT 6.3; Win64; x64)"
 def get_email(url, headers):
     response = requests.get(url, headers=headers)
 
-    result = re.findall(pattern=r'\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,5}', string=response.text)
+    result = re.findall(pattern=r'\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}', string=response.text)
 
     return result
 
