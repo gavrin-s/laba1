@@ -10,7 +10,7 @@ def get_email(url, headers):
 
     result = re.findall(pattern=r'\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}', string=response.text)
 
-    return result
+    return list(set(result))
 
 if __name__ == "__main__":
     print(get_email('https://www.mosigra.ru/', headers=headers))
